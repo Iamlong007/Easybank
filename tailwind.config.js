@@ -19,7 +19,11 @@ module.exports = {
        backgroundImage: theme => ({
          'mobile-background': "url('~@/assets/images/bg-intro-mobile.svg')",
          'desktop-background': "url('~@/assets/images/bg-intro-desktop.svg')",
-        })
+        }),
+        width: {
+          '2/7': '23%',
+         
+        }
     },
   },
   variants: {},
