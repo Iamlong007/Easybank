@@ -326,7 +326,7 @@
               </div>
             </div>
             <div
-              class="md:flex md:flex-row md:justify-between md:w-6/12 md:mt-10"
+              class="md:flex md:flex-row md:text-left md:justify-between md:w-6/12 md:mt-10"
             >
               <div
                 class="text-white text-xs font-light flex flex-col mt-4 md:mt-0"
