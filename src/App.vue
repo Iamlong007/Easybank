@@ -7,24 +7,34 @@
           <img src="./assets/images/logo.svg" alt="Logo Image" />
         </div>
         <div class="mt-2 deskNav">
-          <a href="" class="px-4 hover:text-green-500 hover:font-medium"
+          <a
+            href=""
+            class="px-4 hover:text-green-500 active pb-6 hover:font-medium"
             >Home</a
           >
-          <a href="" class="px-4 hover:text-green-500 hover:font-medium"
+          <a
+            href=""
+            class="px-4 hover:text-green-500 active pb-6 hover:font-medium"
             >About</a
           >
-          <a href="" class="px-4 hover:text-green-500 hover:font-medium"
+          <a
+            href=""
+            class="px-4 hover:text-green-500 active pb-6 hover:font-medium"
             >Contact</a
           >
-          <a href="" class="px-4 hover:text-green-500 hover:font-medium"
+          <a
+            href=""
+            class="px-4 hover:text-green-500 active pb-6 hover:font-medium"
             >Blog</a
           >
-          <a href="" class="px-4 hover:text-green-500 hover:font-medium"
+          <a
+            href=""
+            class="px-4 hover:text-green-500 active pb-6 hover:font-medium"
             >Career</a
           >
         </div>
         <button
-          class="navBt focus:outline-none focus:shadow-outline bg-gradient-to-r from-primary to-secondary py-3 px-10 rounded-full font-medium text-gray-100 text-sm"
+          class="navBt hoverBt shadow-sm hover:bg-blue-400 focus:outline-none focus:shadow-outline bg-gradient-to-r from-primary to-secondary py-3 px-10 rounded-full font-medium text-gray-100 text-sm"
         >
           Request Invite
         </button>
@@ -35,7 +45,11 @@
     </div>
 
     <div
-      class="background bg-mobile-background md:bg-desktop-background md:bg-auto bg-gray-300 bg-no-repeat bg-contain"
+      :class="
+        nav
+          ? 'activeBackground'
+          : 'bg-gray-300 background bg-mobile-background md:bg-desktop-background md:bg-auto  bg-no-repeat bg-contain'
+      "
     >
       <!-- Header Section -->
       <div
@@ -44,7 +58,12 @@
         <div class="md:w-6/12 md:float-right">
           <img src="./assets/images/image-mockups.png" alt="" class="mock" />
         </div>
-        <div class="md:w-4/12 md:pt-24 md:pb-32">
+        <div
+          class="md:w-4/12 md:pt-24 md:pb-32"
+          data-aos="fade-right"
+          data-aos-delay="500"
+          data-aos-duration="1500"
+        >
           <h1
             class="text-3xl md:text-5xl md:text-left pt-6 leading-tight font-medium"
           >
@@ -56,33 +75,37 @@
             more.
           </p>
           <button
-            class="md:float-left mx-auto mt-8 focus:outline-none focus:shadow-outline bg-gradient-to-r from-primary to-secondary py-3 px-10 rounded-full font-medium text-gray-100 text-sm"
+            class="md:float-left shadow-xs hoverBt hover:bg-blue-400 mx-auto mt-8 focus:outline-none focus:shadow-outline bg-gradient-to-r from-primary to-secondary py-3 px-10 rounded-full font-medium text-gray-100 text-sm"
           >
             Request Invite
           </button>
         </div>
-        <!-- <transition name="fade">
+        <transition name="fade">
           <div
             v-if="nav"
-            class="w-4/6 sm:w-3/6 absolute inset-0 md:w-2/6 mx-auto bg-white rounded-sm shadow-sm h-auto text-center font-medium text-gray-800 flex-row"
+            class="w-5/6 mt-12 absolute inset-0 md:w-2/6 mx-auto bg-white rounded-sm shadow-sm h-64 text-center font-medium text-gray-800 flex-row"
           >
-            <p class="p-2">Home</p>
+            <p class="p-2 mt-4">Home</p>
             <p class="p-2">About</p>
             <p class="p-2">Contact</p>
             <p class="p-2">Blog</p>
             <p class="p-2">Careers</p>
           </div>
-        </transition> -->
-        <!-- <div class="w-11/12 mx-auto"></div> -->
+        </transition>
       </div>
       <!-- Second Frame -->
       <div class="bg-gray-200 pb-32">
         <div class="flex flex-col w-10/12 mx-auto">
-          <div class="pt-8">
+          <div
+            class="pt-8"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            data-aos-delay="300"
+          >
             <h1
               class="text-3xl font-medium md:text-left text-gray-700 md:text-4xl w-9/12 md:w-11/12 md:ml-0 leading-tight mx-auto text-center"
             >
-              Why chose Easybank?
+              Why choose Easybank?
             </h1>
             <p class="text-gray-600 md:text-left md:w-6/12 text-center pt-4">
               We leverage Open Banking to turn your bank account into your
@@ -160,7 +183,12 @@
       <!-- Article Section -->
       <div class="bg-gray-300">
         <div class="flex flex-col w-10/12 mx-auto">
-          <div class="pt-16">
+          <div
+            class="pt-16"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            data-aos-delay="300"
+          >
             <h1
               class="text-3xl font-medium md:text-left text-gray-700 md:text-4xl w-10/12 md:w-11/12 md:ml-0 leading-tight mx-auto text-center"
             >
@@ -275,6 +303,59 @@
           </div>
         </div>
       </div>
+      <!-- Footer -->
+      <div class="footer pb-12">
+        <div
+          class="flex flex-col md:flex-row md:justify-between w-10/12 mx-auto"
+        >
+          <div class="w-7/12 mx-auto md:flex md:flex-row md:ml-0">
+            <div class="mt-6 w-12/12 md:w-3/12 md:ml-0 mx-auto md:mt-12">
+              <div class="md:mt-2">
+                <img
+                  src="./assets/images/footerLogo.svg"
+                  alt=""
+                  class="mx-auto md:ml-0"
+                />
+              </div>
+              <div class="flex flex-row justify-between mt-8">
+                <img src="./assets/images/icon-facebook.svg" alt="" />
+                <img src="./assets/images/icon-youtube.svg" alt="" />
+                <img src="./assets/images/icon-twitter.svg" alt="" />
+                <img src="./assets/images/icon-pinterest.svg" alt="" />
+                <img src="./assets/images/icon-instagram.svg" alt="" />
+              </div>
+            </div>
+            <div
+              class="md:flex md:flex-row md:justify-between md:w-6/12 md:mt-10"
+            >
+              <div
+                class="text-white text-xs font-light flex flex-col mt-4 md:mt-0"
+              >
+                <a href="" class="py-2 hover:text-blue-400">About Us</a>
+                <a href="" class="py-2 hover:text-blue-400">Contact</a>
+                <a href="" class="py-2 hover:text-blue-400">Blog</a>
+              </div>
+              <div class="text-white text-xs font-light flex flex-col">
+                <a href="" class="py-2 hover:text-blue-400">Careers</a>
+                <a href="" class="py-2 hover:text-blue-400">Support</a>
+                <a href="" class="py-2 hover:text-blue-400">Privacy Policy</a>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col mt-8 md:mt-12">
+            <div class="w-8/12 mx-auto md:w-10/12 md:ml-12">
+              <button
+                class="hover:bg-blue-400 hoverBt mx-auto focus:outline-none focus:shadow-outline bg-gradient-to-r from-primary to-secondary py-3 px-10 rounded-full font-medium text-gray-100 text-sm"
+              >
+                Request Invite
+              </button>
+            </div>
+            <p class="mt-4 text-gray-500 text-center">
+              &copy; Easybank. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -327,6 +408,20 @@ export default {
 .mock {
   margin-top: -30%;
 }
+.activeBackground {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(128, 128, 128, 0.25) 100%
+    ),
+    #ffffff;
+}
+.active:hover {
+  border-bottom: 4px solid rgb(45, 196, 45);
+}
+.hoverBt:hover {
+  background: linear-gradient(90deg, #1d8a3a 0%, #197d96 100%);
+}
 .border {
   border: 5px solid red;
 }
@@ -336,6 +431,9 @@ export default {
 .imageHeight {
   height: 13rem;
   width: 100%;
+}
+.footer {
+  background-color: hsl(233, 26%, 24%);
 }
 @media (min-width: 768px) {
   .background {
